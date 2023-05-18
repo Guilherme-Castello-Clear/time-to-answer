@@ -2,6 +2,9 @@ source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.7.2'
+
+gem 'kaminari'
+gem 'kaminari-i18n'
 gem 'faker'
 gem 'devise'
 gem 'tty-spinner'
