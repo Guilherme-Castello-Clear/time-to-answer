@@ -1,11 +1,16 @@
 class AdminsBackoffice::AdminsController < AdminsBackofficeController
+<<<<<<< HEAD
   before_action :verify_password, only: [:update, :create]
+=======
+  before_action :verify_password, only: [:update]
+>>>>>>> f686038097ba1629b3b4ed3836725c5338785fb8
   before_action :set_admin, only: [:edit, :update]
   
   def index
     @admins = Admin.all
   end
 
+<<<<<<< HEAD
   def new
     @admin = Admin.new
   end
@@ -18,6 +23,8 @@ class AdminsBackoffice::AdminsController < AdminsBackofficeController
       render :new
     end
   end
+=======
+>>>>>>> f686038097ba1629b3b4ed3836725c5338785fb8
   def edit
   end
 
