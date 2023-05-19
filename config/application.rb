@@ -26,6 +26,8 @@ module TimeToAnswer
     # Application configuration can go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded after loading
     config.generators.system_tests = nil
+
+
     # the framework and any gems in your application.
   end
 end
