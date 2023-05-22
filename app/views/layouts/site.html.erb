@@ -70,27 +70,9 @@
       </nav>
 
       <!-- Main component for a primary marketing message or call to action -->
-      <div class="jumbotron">
-      <h1>Site::Welcome#index</h1>
-      <p>Find me in app/views/site/welcome/index.html.erb</p>
+       <!-- /container -->
 
-
-      <% if user_signed_in? %>
-          <p>Usuário LOGADO: <%= current_user.email %></p>
-      <% else %>
-          <p>Usuário NÃO LOGADO</p>
-      <% end %>
-
-      <% if admin_signed_in? %>
-          <p>Admin LOGADO:  <%= current_admin.email %></p>
-      <% else %>
-          <p>Admin NÃO LOGADO</p>
-      <% end %>
-      </div>
       <%= yield %>
-
-    </div> <!-- /container -->
-
 
     <%= javascript_include_tag 'application'%>
     <%= javascript_include_tag 'site'%>
