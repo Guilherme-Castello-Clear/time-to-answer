@@ -1,0 +1,22 @@
+var btn = document.getElementById('submit_<%= @answer.question_id %>');
+btn.classList.remove('btn-default');
+btn.classList.remove('btn-success');
+btn.classList.remove('btn-danger');
+
+<% if @answer.correct %>
+    btn.classList.add('btn-success');
+    $.bootstrapGrowl('Você acertou!', {
+        type: 'success',
+        align: 'right',
+        allow_dismiss: true,
+        stackup_spacing: 10
+    });
+<% else %>
+    btn.classList.add('btn-danger');
+    $.bootstrapGrowl('Você errou :(', {
+        type: 'danger',
+        align: 'right',
+        allow_dismiss: true,
+        stackup_spacing: 10
+    });
+<% end %>
