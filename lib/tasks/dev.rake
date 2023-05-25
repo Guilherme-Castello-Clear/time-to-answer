@@ -89,6 +89,16 @@ namespace :dev do
   end
 
 
+  desc "Adiciona as respostas no redis"
+  task add_answers_to_redis: :environment do
+    show_spinner("Adicionando todas as respostas no Redis...") do
+      Answer.all.each do |answer|
+        Rails.cache.write(answer.id, "#{answer.question.id}@@#{answer.correct}")
+      end
+    end
+  end
+  
+
   private
 
   def elect_true_answer(answers_array)
