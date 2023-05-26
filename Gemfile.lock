@@ -85,14 +85,30 @@ GEM
       railties (>= 4.1.0)
       responders
       warden (~> 1.2.3)
+    elastic-transport (8.2.1)
+      faraday (< 3)
+      multi_json
+    elasticsearch (8.8.0)
+      elastic-transport (~> 8)
+      elasticsearch-api (= 8.8.0)
+    elasticsearch-api (8.8.0)
+      multi_json
     erubi (1.12.0)
     execjs (2.8.1)
     faker (3.2.0)
       i18n (>= 1.8.11, < 2)
+    faraday (2.7.5)
+      faraday-net_http (>= 2.0, < 3.1)
+      ruby2_keywords (>= 0.0.4)
+    faraday-net_http (3.0.2)
     ffi (1.15.5)
     globalid (1.1.0)
       activesupport (>= 5.0)
+<<<<<<< HEAD
     hiredis (0.6.3)
+=======
+    hashie (5.0.0)
+>>>>>>> e85dc5d (Feat: Question search improved with Elasticsearch)
     i18n (1.13.0)
       concurrent-ruby (~> 1.0)
     io-like (0.3.1)
@@ -133,6 +149,7 @@ GEM
     mini_portile2 (2.8.2)
     minitest (5.18.0)
     msgpack (1.7.0)
+    multi_json (1.15.0)
     net-imap (0.3.4)
       date
       net-protocol
@@ -208,6 +225,7 @@ GEM
       actionpack (>= 5.2)
       railties (>= 5.2)
     rexml (3.2.5)
+    ruby2_keywords (0.0.5)
     ruby_dep (1.5.0)
     rubyzip (2.3.2)
     sass (3.7.4)
@@ -221,6 +239,9 @@ GEM
       sprockets (>= 2.8, < 4.0)
       sprockets-rails (>= 2.0, < 4.0)
       tilt (>= 1.1, < 3)
+    searchkick (5.2.4)
+      activemodel (>= 5.2)
+      hashie
     selenium-webdriver (4.9.0)
       rexml (~> 3.2, >= 3.2.5)
       rubyzip (>= 1.2.2, < 3.0)
@@ -278,6 +299,7 @@ DEPENDENCIES
   cocoon
   coffee-rails (~> 4.2)
   devise
+  elasticsearch
   faker
   hiredis
   jbuilder (~> 2.5)
@@ -291,6 +313,7 @@ DEPENDENCIES
   rails-i18n (~> 5.1)
   redis
   sass-rails (~> 5.0)
+  searchkick
   selenium-webdriver
   spring
   spring-watcher-listen (~> 2.0.0)
