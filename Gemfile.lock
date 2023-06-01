@@ -85,14 +85,6 @@ GEM
       railties (>= 4.1.0)
       responders
       warden (~> 1.2.3)
-    elastic-transport (8.2.1)
-      faraday (< 3)
-      multi_json
-    elasticsearch (8.8.0)
-      elastic-transport (~> 8)
-      elasticsearch-api (= 8.8.0)
-    elasticsearch-api (8.8.0)
-      multi_json
     erubi (1.12.0)
     execjs (2.8.1)
     faker (3.2.0)
@@ -104,11 +96,8 @@ GEM
     ffi (1.15.5)
     globalid (1.1.0)
       activesupport (>= 5.0)
-<<<<<<< HEAD
-    hiredis (0.6.3)
-=======
     hashie (5.0.0)
->>>>>>> e85dc5d (Feat: Question search improved with Elasticsearch)
+    hiredis (0.6.3)
     i18n (1.13.0)
       concurrent-ruby (~> 1.0)
     io-like (0.3.1)
@@ -148,7 +137,7 @@ GEM
     mini_mime (1.1.2)
     mini_portile2 (2.8.2)
     minitest (5.18.0)
-    msgpack (1.7.0)
+    msgpack (1.7.1)
     multi_json (1.15.0)
     net-imap (0.3.4)
       date
@@ -160,9 +149,17 @@ GEM
     net-smtp (0.3.3)
       net-protocol
     nio4r (2.5.9)
-    nokogiri (1.15.0)
+    nokogiri (1.15.2)
       mini_portile2 (~> 2.8.2)
       racc (~> 1.4)
+    opensearch-api (2.2.0)
+      multi_json
+    opensearch-ruby (2.1.0)
+      opensearch-api (~> 2.1)
+      opensearch-transport (~> 2.0)
+    opensearch-transport (2.1.0)
+      faraday (>= 1.0, < 3)
+      multi_json
     orm_adapter (0.5.0)
     pdf-core (0.9.0)
     prawn (2.4.0)
@@ -257,7 +254,7 @@ GEM
       actionpack (>= 5.2)
       activesupport (>= 5.2)
       sprockets (>= 3.0.0)
-    sqlite3 (1.6.2)
+    sqlite3 (1.6.3)
       mini_portile2 (~> 2.8.0)
     thor (1.2.2)
     thread_safe (0.3.6)
@@ -299,13 +296,13 @@ DEPENDENCIES
   cocoon
   coffee-rails (~> 4.2)
   devise
-  elasticsearch
   faker
   hiredis
   jbuilder (~> 2.5)
   kaminari
   kaminari-i18n
   listen (>= 3.0.5, < 3.2)
+  opensearch-ruby
   prawn-rails
   pry-rails
   puma (~> 3.11)
